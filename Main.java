@@ -22,17 +22,17 @@ public class Main {
         System.out.println("вторая матрица:");
         System.out.println(matrix2);
 
-        // Операция сложения
+        //сложения
         Matrix sumMatrix = matrix1.add(matrix2);
         System.out.println("Сложение матриц:");
         System.out.println(sumMatrix);
 
-        // Операция вычитания
+        //вычитания
         Matrix differenceMatrix = matrix1.subtract(matrix2);
         System.out.println("Вычитание:");
         System.out.println(differenceMatrix);
 
-        // Операция умножения
+        //умножения
         try {
             Matrix productMatrix = matrix1.multiply(matrix2);
             System.out.println("Умножение:");
@@ -42,7 +42,7 @@ public class Main {
         }
 
 
-        // Операция транспонирования
+        //транспонирования
         Matrix transposeMatrix = matrix1.transpose();
         System.out.println("Транспонирование 1:");
         System.out.println(transposeMatrix);
@@ -53,7 +53,7 @@ public class Main {
         System.out.println(inverseMatrix);
 
 
-        // Вычисление детерминанта первой матрицы
+        //детерминанта первой матрицы
         try {
             ComplexNumber determinant = matrix1.getDeterminant();
             System.out.println("Детерминант 1: " + determinant);
@@ -61,7 +61,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        // Операция деления (умножение на обратную матрицу)
+        //деления (умножение на обратную матрицу)
         try {
             Matrix divisionMatrix = matrix1.divide(matrix2);
             System.out.println("\nДеление матриц (1 / 2):");
