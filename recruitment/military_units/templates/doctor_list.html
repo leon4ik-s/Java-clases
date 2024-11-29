@@ -1,0 +1,38 @@
+<!-- doctor_list.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список докторов</title>
+</head>
+<body>
+    <h1>Список докторов</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Специализация</th>
+                <th>Возраст</th>
+                <th>Телефон</th>
+                <th>Email</th>
+                <th>Дата регистрации</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            <tr>
+                <td>{{ doctor.first_name }}</td>
+                <td>{{ doctor.last_name }}</td>
+                <td>{{ doctor.specialty }}</td>
+                <td>{{ doctor.age }}</td>
+                <td>{{ doctor.phone_number }}</td>
+                <td>{{ doctor.email }}</td>
+                <td>{{ doctor.registered_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

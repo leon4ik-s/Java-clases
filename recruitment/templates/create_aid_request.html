@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка на гуманитарную помощь</title>
+</head>
+<body>
+    <h1>Подать заявку на гуманитарную помощь</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить заявку</button>
+    </form>
+</body>
+</html>

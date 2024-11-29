@@ -1,0 +1,32 @@
+<!-- doctor_application_list.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список заявок докторов</title>
+</head>
+<body>
+    <h1>Список заявок докторов</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Доктор</th>
+                <th>Воинская часть</th>
+                <th>Статус</th>
+                <th>Дата подачи</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for application in applications %}
+            <tr>
+                <td>{{ application.doctor }}</td>
+                <td>{{ application.military_unit }}</td>
+                <td>{{ application.status }}</td>
+                <td>{{ application.applied_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
