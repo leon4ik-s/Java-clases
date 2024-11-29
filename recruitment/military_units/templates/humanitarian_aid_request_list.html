@@ -1,0 +1,34 @@
+<!-- humanitarian_aid_request_list.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список запросов на гуманитарную помощь</title>
+</head>
+<body>
+    <h1>Список запросов на гуманитарную помощь</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Воинская часть</th>
+                <th>Тип помощи</th>
+                <th>Количество</th>
+                <th>Статус</th>
+                <th>Дата создания</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in aid_requests %}
+            <tr>
+                <td>{{ request.military_unit }}</td>
+                <td>{{ request.aid_type }}</td>
+                <td>{{ request.quantity }}</td>
+                <td>{{ request.status }}</td>
+                <td>{{ request.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

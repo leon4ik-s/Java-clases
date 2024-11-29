@@ -1,0 +1,40 @@
+<!-- military_units_list.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список воинских частей</title>
+</head>
+<body>
+    <h1>Список воинских частей</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Номер</th>
+                <th>Местоположение</th>
+                <th>Контактное лицо</th>
+                <th>Телефон</th>
+                <th>Специализация</th>
+                <th>Статус</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for unit in units %}
+            <tr>
+                <td>{{ unit.name }}</td>
+                <td>{{ unit.number }}</td>
+                <td>{{ unit.location }}</td>
+                <td>{{ unit.contact_person }}</td>
+                <td>{{ unit.phone_number }}</td>
+                <td>{{ unit.speciality }}</td>
+                <td>{{ unit.status }}</td>
+                <td>{{ unit.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
